@@ -1,7 +1,8 @@
 {
-  "index": "Introduction",
-  "another": "Another Page",
-  "advanced": "Advanced (A Folder)",
+  "OverviewOfPortkey": "Overview of Portkey",
+  "quickStartGuides": "Quickstart Guides",
+  "SDKs": "SDKs",
+  "APIReferences": "API references",
   "about": {
     "title": "About",
     "type": "page"
