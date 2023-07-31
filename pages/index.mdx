@@ -1,5 +1,66 @@
 ## overview of portkey
 import Link from 'next/link'
+import { Cards, Card, Tabs, Tab } from 'nextra/components'
 
 ### 测试内部跳转
 Click <Link href="/SDKs/coreSDK">here</Link> to Core SDK
+
+### 测试Cards组件
+
+<Cards>
+  <Card title="SDKs" href="/SDKs" />
+  <Card  title="APIReferences" href="/APIReferences" />
+  <Card  title="environmentalConfiguration" href="/environmentalConfiguration" />
+</Cards>
+
+### 测试tab和代码块组件
+<Tabs items={['Typescript', 'C#', 'Golang']}>
+  <Tab>
+    ```ts {1,4-5} showLineNumbers filename="Typescript.js"
+        import { useState } from 'react'
+        
+        function Counter() {
+        const [count, setCount] = useState(0)
+        return <button onClick={() => setCount(count + 1)}>{count}</button>        }
+    ```
+  </Tab>
+  <Tab>
+    ``` c# showLineNumbers
+        using Imx.Sdk;
+    try
+        {
+            Client client = new Client(new Config()
+            {
+                Environment = EnvironmentSelector.Sandbox // Or EnvironmentSelector.Mainnet
+            });
+        }
+    catch (Exception e)
+        {
+            Console.WriteLine("Error message: " + e.Message);
+            Console.WriteLine(e.StackTrace);
+        }
+    ```
+  </Tab>
+  <Tab>
+    ``` go showLineNumbers
+        import "github.com/immutable/imx-core-sdk-golang/imx/api"
+
+        const alchemyAPIKey = "alchemy api key"
+
+        func main() {
+            apiConfiguration := api.NewConfiguration()
+            cfg := imx.Config{
+                APIConfig:     apiConfiguration,
+                AlchemyAPIKey: YOUR_ALCHEMY_API_KEY,
+                Environment:   imx.Sandbox,
+            }
+            client, err := imx.NewClient(&cfg)
+            if err != nil {
+                log.Panicf("error in NewClient: %v\n", err)
+            }
+            defer c.EthClient.Close()
+        }
+    
+    ```
+  </Tab>
+</Tabs>
