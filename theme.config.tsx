@@ -13,6 +13,10 @@ const config: DocsThemeConfig = {
   footer: {
     text: 'Nextra Docs Template',
   },
+  i18n: [
+    { locale: 'en', text: 'English' },
+    { locale: 'zh', text: '中文' },
+  ]
 }
 
 export default config

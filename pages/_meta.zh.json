@@ -1,0 +1,20 @@
+{
+    "index": "介绍",
+    "OverviewOfPortkey": "Portkey概述",
+    "quickStartGuides": "快速开始",
+    "SDKs": "SDKs",
+    "APIReferences": "API文献",
+    "environmentalConfiguration": "环境",
+    "Troubleshooting": "故障排除",
+    "about": {
+      "title": "关于",
+      "type": "page"
+    },
+    "contact": {
+      "title": "联系我们 ↗",
+      "type": "page",
+      "href": "https://twitter.com/shuding_",
+      "newWindow": true
+    }
+  }
+  
