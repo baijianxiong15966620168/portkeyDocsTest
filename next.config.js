@@ -8,7 +8,8 @@ module.exports = {
     i18n: {
       locales: ['en', 'zh'],
       defaultLocale: 'en',
-    }
+    },
+    
   }),
   async rewrites() {
     return [
@@ -17,5 +18,5 @@ module.exports = {
         destination: `http://localhost:8055/items/:path*`,
       },
     ];
-  }
+  },
 };
